@@ -2,8 +2,7 @@ import MenuItem from "./components/MenuItem";
 import { menuItems } from "./data/db";
 import "./index.css";
 import useOrder from "./hooks/useOrder";
-import OrderItem from "./components/OrderContent";
-import OrderContentv2 from "./components/OrderContentv2";
+import OrderContentv2 from "./components/OrderContentEnhanced";
 
 function App() {
   const { order, addItem, removeItem, incrementQuantity, decrementQuantity, total} =
