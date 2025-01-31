@@ -3,9 +3,11 @@ import { menuItems } from "./data/db";
 import "./index.css";
 import useOrder from "./hooks/useOrder";
 import OrderItem from "./components/OrderContent";
+import OrderContentv2 from "./components/OrderContentv2";
 
 function App() {
-  const { order, addItem, removeItem } = useOrder();
+  const { order, addItem, removeItem, incrementQuantity, decrementQuantity, total} =
+    useOrder();
 
   return (
     <>
@@ -25,9 +27,22 @@ function App() {
           </div>
         </div>
 
-        <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
-          <OrderItem order={order} removeItem={removeItem} />
-        </div>
+        {/* <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
+          <OrderItem 
+            order={order} 
+            removeItem={removeItem} 
+            incrementQuantity={incrementQuantity}
+            decrementQuantity={decrementQuantity}
+            />
+        </div> */}
+
+        <OrderContentv2
+          order={order}
+          removeItem={removeItem}
+          incrementQuantity={incrementQuantity}
+          decrementQuantity={decrementQuantity}
+          total={total}
+        />
       </main>
     </>
   );
