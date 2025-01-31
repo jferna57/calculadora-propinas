@@ -1,3 +1,4 @@
+import { formatCurrency } from "../helpers";
 import { OrderItemT } from "../types/index";
 
 type OrderContentProps = {
@@ -22,7 +23,7 @@ export default function OrderContent({ order, removeItem }: OrderContentProps) {
           >
             <p>{item.name}</p>
             <p className="font-black">{item.quantity}</p>
-            <p className="font-black">{item.price * item.quantity} €</p>
+            <p className="font-black">{formatCurrency(item.price * item.quantity)}</p>
           </button>
         ))}
 
