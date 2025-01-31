@@ -18,7 +18,7 @@ export default function OrderContent({ order, removeItem }: OrderContentProps) {
         {order.map((item) => (
           <button
             key={item.id}
-            className="border-2 border-teal-400 p-3 w-full flex justify-between hover:bg-teal-200 hover:text-white"
+            className="border-2 border-teal-400 p-3 w-full flex justify-between hover:bg-teal-200 hover:text-white rounded-lg"
             onClick={() => removeItem(item)}
           >
             <p>{item.name}</p>
